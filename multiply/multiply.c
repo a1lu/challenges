@@ -26,11 +26,8 @@ int main()
     {
         int a=n1[i]-0x30, b=n2[i]-0x30;
         int multi=a*b+r;
-        /*e=0;*/
         e=multi % 10;
         r=multi/10;
-        /*printf("%d * %d = %d r %d ( %d)\n",*/
-                /*a,    b,   e,   r, multi);*/
         m[k]=e+0x30;
         --k;
         
@@ -38,5 +35,4 @@ int main()
     if(r)
         m[k]=r+0x30;
     printf("%101s\n%101s\n%101s\n",n1,n2,m);
-    /*printf("%-10lu\n%-10lu\n%-10lu\n",atol(n1),atol(n2),atol(m));*/
 }
